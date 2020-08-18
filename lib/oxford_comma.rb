@@ -5,6 +5,7 @@ def oxford_comma(array)
     return array.join(" and ")
   elsif array.length > 2
     array << " and #{array.last}"
+    array.delete_at(array.last - 1)
     array.join(", ")
   end
 end
